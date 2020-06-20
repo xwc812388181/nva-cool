@@ -122,9 +122,27 @@ body {
   display: none;
   cursor: default;
 }
-.siteList .site:hover > .close {
+
+.siteList .site > .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
   display: block;
+  cursor: default;
 }
+
+@media (min-width: 500px) {
+  .siteList .site > .close {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .siteList .site:hover > .close {
+    display: block;
+  }
+}
+
 .siteList .addButton {
   border: 1px solid #ddd;
   background: white;
@@ -167,3 +185,4 @@ body {
     margin-top: 0;
   }
 }
+
